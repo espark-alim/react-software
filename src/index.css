@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './fonts.css';
+
+body {
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+
+  .bg-welcome-sm-only {
+    background-image: url('assets/frame.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(39.02px);
+    border-radius: 27.87px;
+  }
+
+  .bg-forget-sm-only {
+    background-image: url('assets/forget-frame.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(39.02px);
+    border-radius: 27.87px;
+  }
+
+  .bg-done-sm-only {
+    background-image: url('assets/done-frame.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(39.02px);
+    border-radius: 27.87px;
+  }
+
+  .bg-input {
+    background-color: transparent;
+    background-image: url('assets/bg-input.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 27.87px;
+    height: 52px;
+  }
+}
+
+.bg-input {
+  background-color: transparent;
+  background-image: url('assets/bg-input.png');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 27.87px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+}
+
+/* layout styling */
+.active-border {
+  position: relative;
+  padding-left: 1rem;
+  transition: padding-left 0.3s ease-in-out;
+}
+
+.active-border::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #029E9C;
+  border-radius: 28px;
+}
+
+/* ******** */
+.tracking-dropdown-content,
+.memo-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 11px;
+  box-shadow: 0 0px 8.5px 0 rgba(2, 158, 156, 0.27);
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.tracking-dropdown-content div,
+.memo-dropdown-content div {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #374151;
+}
+
+.tracking-dropdown-content div:hover,
+.memo-dropdown-content div:hover {
+  background-color: #c6ebea;
+}
+
+/* Apply border-radius to the first child */
+.tracking-dropdown-content div:first-child:hover,
+.memo-dropdown-content div:first-child:hover {
+  background-color: #c6ebea;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
+
+/* Apply border-radius to the last child */
+.tracking-dropdown-content div:last-child:hover,
+.memo-dropdown-content div:last-child:hover {
+  background-color: #c6ebea;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+
+.show {
+  display: block;
+}
+
+/* layout styling */
+.active-border {
+  position: relative;
+  padding-left: 1rem;
+  transition: padding-left 0.3s ease-in-out;
+}
+
+.active-border::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #029E9C;
+  border-radius: 28px;
+}
+
+/* ******** */
+.custom-checkbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.custom-checkbox .checkbox-label {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  /* Fix invalid color */
+  border: 1px solid #029E9C;
+  border-radius: 4px;
+  box-shadow: inset 0px 6px 8px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-checkbox input:checked+.checkbox-label {
+  background-color: #029E9C;
+  background-image: url(assets/tick.png);
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.active-border {
+  position: relative;
+  padding-left: 1rem;
+  transition: padding-left 0.3s ease-in-out;
+}
+
+.active-border::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #029E9C;
+  border-radius: 28px;
+}
