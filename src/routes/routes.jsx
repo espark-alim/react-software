@@ -1,15 +1,16 @@
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
-import PublicRoutes from './publicRoute';
-import { publicScreens } from './paths';
+import { privateScreens, publicScreens } from './paths';
 import NotFound from '../components/NotFound';
+import PrivateRoute from './privateRoute';
+import PublicRoute from './publicRoute';
 
-const AppRoutes = ({ _publicScreen }) => {
+const AppRoutes = ({ _publicScreen, _privateScreen }) => {
   let routes = useRoutes([
     {
-      element: <PublicRoutes />,
+      element: <PublicRoute />,
       children: _publicScreen,
     },
-    // { element: <PrivateRoutes />, children: _privateScreen },
+    { element: <PrivateRoute />, children: _privateScreen },
     { path: '', element: <NotFound /> },
   ]);
 
@@ -18,13 +19,13 @@ const AppRoutes = ({ _publicScreen }) => {
 
 const RouteProvider = () => {
   const _publicScreen = publicScreens;
-  // const _privateScreens = privateScreens;
+  const _privateScreen = privateScreens;
 
   return (
     <Router>
       <AppRoutes
         _publicScreen={_publicScreen}
-      // _privateScreen={_privateScreen}
+        _privateScreen={_privateScreen}
       />
     </Router>
   );

@@ -13,7 +13,7 @@ const Splash = () => {
                 </div>
                 <div className="mx-auto max-w-[395px] mt-10">
                     <button
-                        onClick={() => open('/welcome')}
+                        onClick={(e) => open(e, '/welcome')}
                         className="tracking-wide font-semibold bg-gradient-to-r from-[#029e9c] to-[#066865] rounded-[13.56px] backdrop-blur-[135.60px] text-gray-100 w-full py-[13px]  transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                         Continue
                     </button>

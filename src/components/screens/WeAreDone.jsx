@@ -1,6 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import { open } from '../../utils/utils';
 
 const WeAreDone = () => {
+
+    const handleDoneAndContinue = () => {
+        console.log('Done and Continue clicked');
+
+    }
+
     return (
         <div className="flex flex-col my-8 sm:my-12">
             <div className="text-center mx-3 sm:mx-auto max-w-[550px]">
@@ -13,14 +21,14 @@ const WeAreDone = () => {
                         <div className="mx-auto max-w-[395px] mt-7">
                             <button id="done-btn"
                                 className="font-semiBold bg-gradient-to-r from-[#029e9c] to-[#066865] rounded-[13.56px] backdrop-blur-[135.60px] text-gray-100 w-full py-[13px]  transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
-                            // onClick={handleDoneAndContinue()}
+                                onClick={(e) => open(e, '/screen-capture')}
                             >
                                 Countinue
                             </button>
                         </div>
                         <p for="bordered-checkbox-2"
                             className="w-full py-5 text-center text-[#1ebcba] text-[13.01px] font-normal font-['Helvetica']">
-                            <a href="#"> Help centre? </a></p>
+                            <Link to="#"> Help centre? </Link></p>
                     </div>
                 </div>
             </div>
